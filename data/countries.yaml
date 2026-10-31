@@ -1,0 +1,301 @@
+_note: Country names and nationality adjectives (English and Arabic, as written in the bundled lists) -> ISO 3166-1 alpha-2. Base rows come from the OFAC CountryValues reference table; extras cover UN/UK/UAE
+  wording. Unknown names are kept verbatim in results.
+countries:
+  Afghanistan: AF
+  Albania: AL
+  Algeria: DZ
+  Angola: AO
+  Antigua and Barbuda: AG
+  Argentina: AR
+  Armenia: AM
+  Aruba: AW
+  Australia: AU
+  Austria: AT
+  Azerbaijan: AZ
+  Bahamas, The: BS
+  Bahrain: BH
+  Bangladesh: BD
+  Barbados: BB
+  Belarus: BY
+  Belgium: BE
+  Belize: BZ
+  Benin: BJ
+  Bermuda: BM
+  Bolivia: BO
+  Bolivia (Plurinational State of): BO
+  Bosnia and Herzegovina: BA
+  Brazil: BR
+  Brunei: BN
+  Brunei Darussalam: BN
+  Bulgaria: BG
+  Burkina Faso: BF
+  Burma: MM
+  Cabo Verde: CV
+  Cambodia: KH
+  Cameroon: CM
+  Canada: CA
+  Cayman Islands: KY
+  Central African Republic: CF
+  Chad: TD
+  Chile: CL
+  China: CN
+  Colombia: CO
+  Comoros: KM
+  Congo (Democratic Republic): CD
+  Congo: CG
+  Congo, Republic of the: CG
+  Republic of the Congo: CG
+  Congo, Democratic Republic of the: CD
+  Costa Rica: CR
+  Cote d Ivoire: CI
+  Cote d'Ivoire: CI
+  Croatia: HR
+  Cuba: CU
+  Cyprus: CY
+  Czech Republic: CZ
+  Czechia: CZ
+  Côte d'Ivoire: CI
+  DPRK: KP
+  DRC: CD
+  Democratic People's Republic of Korea: KP
+  Democratic Republic of the Congo: CD
+  Denmark: DK
+  Djibouti: DJ
+  Dominica: DM
+  Dominican Republic: DO
+  Ecuador: EC
+  Egypt: EG
+  El Salvador: SV
+  Equatorial Guinea: GQ
+  Eritrea: ER
+  Estonia: EE
+  Eswatini: SZ
+  Ethiopia: ET
+  Fiji: FJ
+  Finland: FI
+  France: FR
+  Georgia: GE
+  Germany: DE
+  Ghana: GH
+  Gibraltar: GI
+  Greece: GR
+  Guatemala: GT
+  Guernsey: GG
+  Guinea: GN
+  Guinea-Bissau: GW
+  Guyana: GY
+  Haiti: HT
+  Honduras: HN
+  Hong Kong: HK
+  Hungary: HU
+  Iceland: IS
+  India: IN
+  Indonesia: ID
+  Iran: IR
+  Iran (Islamic Republic of): IR
+  Iran, Islamic Republic of: IR
+  Iraq: IQ
+  Ireland: IE
+  Israel: IL
+  Italy: IT
+  Ivory Coast: CI
+  Jamaica: JM
+  Japan: JP
+  Jersey: JE
+  Jordan: JO
+  Kazakhstan: KZ
+  Kenya: KE
+  Kingdom of Saudi Arabia: SA
+  Korea, North: KP
+  Korea, South: KR
+  Kosovo: XK
+  Kuwait: KW
+  Kyrgyzstan: KG
+  Lao People's Democratic Republic: LA
+  Laos: LA
+  Latvia: LV
+  Lebanon: LB
+  Liberia: LR
+  Libya: LY
+  Libyan Arab Jamahiriya: LY
+  Liechtenstein: LI
+  Lithuania: LT
+  Luxembourg: LU
+  Macau: MO
+  Malaysia: MY
+  Maldives: MV
+  Mali: ML
+  Malta: MT
+  Man, Isle of: IM
+  Marshall Islands: MH
+  Mauritania: MR
+  Mauritius: MU
+  Mexico: MX
+  Micronesia (Federated States of): FM
+  Moldova: MD
+  Monaco: MC
+  Mongolia: MN
+  Montenegro: ME
+  Morocco: MA
+  Mozambique: MZ
+  Myanmar: MM
+  Namibia: NA
+  Netherlands: NL
+  Netherlands (Kingdom of the): NL
+  New Zealand: NZ
+  Nicaragua: NI
+  Niger: NE
+  Nigeria: NG
+  North Korea: KP
+  North Macedonia, The Republic of: MK
+  Norway: 'NO'
+  Oman: OM
+  Pakistan: PK
+  Palau: PW
+  Palestine: PS
+  Palestinian: PS
+  Panama: PA
+  Paraguay: PY
+  Peru: PE
+  Philippines: PH
+  Poland: PL
+  Portugal: PT
+  Qatar: QA
+  Republic of Korea: KR
+  Republic of Moldova: MD
+  Romania: RO
+  Russia: RU
+  Russian Federation: RU
+  Rwanda: RW
+  Saint Kitts and Nevis: KN
+  Saint Lucia: LC
+  Saint Vincent and the Grenadines: VC
+  Samoa: WS
+  San Marino: SM
+  Saudi Arabia: SA
+  Senegal: SN
+  Serbia: RS
+  Seychelles: SC
+  Sierra Leone: SL
+  Singapore: SG
+  Slovakia: SK
+  Slovenia: SI
+  Somalia: SO
+  South Africa: ZA
+  South Korea: KR
+  South Sudan: SS
+  Spain: ES
+  Sri Lanka: LK
+  St Kitts and Nevis: KN
+  St Lucia: LC
+  State of Palestine: PS
+  Sudan: SD
+  Suriname: SR
+  Sweden: SE
+  Switzerland: CH
+  Syria: SY
+  Syrian Arab Republic: SY
+  Taiwan: TW
+  Tajikistan: TJ
+  Tanzania: TZ
+  Thailand: TH
+  The Gambia: GM
+  The Netherlands: NL
+  Trinidad and Tobago: TT
+  Tunisia: TN
+  Turkey: TR
+  Turkiye: TR
+  Turkmenistan: TM
+  Türkiye: TR
+  UAE: AE
+  UK: GB
+  USA: US
+  Uganda: UG
+  Ukraine: UA
+  United Arab Emirates: AE
+  United Kingdom: GB
+  United Kingdom of Great Britain and Northern Ireland: GB
+  United Republic of Tanzania: TZ
+  United States: US
+  United States of America: US
+  Uruguay: UY
+  Uzbekistan: UZ
+  Vanuatu: VU
+  Venezuela: VE
+  Venezuela (Bolivarian Republic of): VE
+  Viet Nam: VN
+  Vietnam: VN
+  Virgin Islands, British: VG
+  Yemen: YE
+  Zambia: ZM
+  Zimbabwe: ZW
+  أردني: JO
+  أفغانستان: AF
+  أفغاني: AF
+  أمريكا: US
+  أمريكي: US
+  إماراتي: AE
+  إيران: IR
+  إيراني: IR
+  افغانستان: AF
+  الأردن: JO
+  الإمارات: AE
+  الإمارات العربية المتحدة: AE
+  الاردن: JO
+  الامارات: AE
+  البحرين: BH
+  الجزائر: DZ
+  السعودية: SA
+  السعوديه: SA
+  السودان: SD
+  السويد: SE
+  الصومال: SO
+  العراق: IQ
+  الكويت: KW
+  المغرب: MA
+  المملكة المتحدة: GB
+  النمسا: AT
+  الهند: IN
+  الولايات المتحدة: US
+  اليمن: YE
+  اماراتي: AE
+  امريكا: US
+  ايران: IR
+  ايراني: IR
+  باكستان: PK
+  باكستاني: PK
+  بحريني: BH
+  بريطاني: GB
+  بريطانيا: GB
+  بنغلاديش: BD
+  تركي: TR
+  تركيا: TR
+  تونس: TN
+  روسي: RU
+  روسيا: RU
+  سانت كيتس - نافيس: KN
+  سانت كيتس ونيفيس: KN
+  سعودي: SA
+  سوداني: SD
+  سوري: SY
+  سوريا: SY
+  صومالي: SO
+  عراقي: IQ
+  عمان: OM
+  عماني: OM
+  فلسطين: PS
+  فلسطيني: PS
+  قطر: QA
+  قطري: QA
+  كويتي: KW
+  لبنان: LB
+  لبناني: LB
+  ليبي: LY
+  ليبيا: LY
+  ليبيريا: LR
+  مصر: EG
+  مصري: EG
+  موريتانيا: MR
+  نيجيري: NG
+  نيجيريا: NG
+  يمني: YE

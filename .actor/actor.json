@@ -1,0 +1,17 @@
+{
+  "actorSpecification": 1,
+  "name": "sanctions-screener",
+  "title": "GCC Sanctions & Terror-List Screener — OFAC, UN, EU, UK + UAE Local Terrorist List, Arabic-aware, $0.01 per name + MCP",
+  "description": "Screen names against OFAC SDN/Consolidated, UN, EU, UK and the UAE Local Terrorist List. Arabic-aware fuzzy matching with explainable scores, DOB/nationality/ID disambiguation, batch screening and HTML audit reports. $0.01 per name. No AI, no logging; also an MCP server.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "usesStandbyMode": true,
+  "webServerMcpPath": "/mcp",
+  "dockerfile": "./Dockerfile",
+  "readme": "./README.md",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "meta": {
+    "templateId": "python-mcp-server"
+  }
+}

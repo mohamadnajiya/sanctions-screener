@@ -1,0 +1,159 @@
+# Heuristic romanisation-variant groups for Arabic (and some Persian/Urdu/Turkish) given names and name parts.
+# Every token in a group is folded to the first token (the canonical form) before comparison, so
+# "Mohamed Hussein" and "Muhammad Husain" compare as identical strings. This table is a HEURISTIC compiled from
+# common transliteration practice (ALA-LC, BGN/PCGN, and the spellings that actually occur in the OFAC / UN / UK
+# lists); it is not an authority and cannot be exhaustive. Matches that relied on a group are reported in
+# `matched_on` as "romanisation variant" so a reviewer can see what was folded.
+#
+# Rules of thumb used: vowel alternations (o/u, e/i, a/e), doubled consonants, h-dropping (Mohamed/Mohammed),
+# q/k/g for qaf, hamza/ayn apostrophes, ou/u (French-style spellings from North Africa / Lebanon), final -ah/-a/-e.
+version: 2026-10-31
+groups:
+  - [muhammad, mohammad, mohammed, mohamed, mohamad, muhammed, muhamed, muhamad, mohamud, mohammud, mahammad, mohmed, mohd, muhd, mhd, mehmet, mehmed, mahomet, mahmet]
+  - [ahmad, ahmed, ahmet, ahmad, ahmmad, ahmid, ahmeed]
+  - [mahmud, mahmoud, mahmood, mahmut, mehmud, mahmod]
+  - [husayn, hussein, hussain, husain, hossein, hosein, hosain, hussien, huseyin, husein, hoseyn, hosseini, husseini]
+  - [hasan, hassan, hasen, hassen, hasson]
+  - [ali, aly, alee, alli]
+  - [abdullah, abdallah, abdalla, abdulla, abdellah, abdola, abdullahi, abdullh, abdoulaye, abdalah, obaidullah]
+  - [yusuf, youssef, yousef, yousuf, yusef, yussef, yousif, yosef, yusif, youssif]
+  - [khalid, khaled, halit, khaleed, khalud]
+  - [said, saeed, saied, sa'id, saeid, sayid, seid, sayed, sayeed]
+  - [umar, omar, omer, oumar, ömer, omaar]
+  - [usama, osama, oussama, ousama, usamah, osamah]
+  - [qasim, qassem, kassem, kasem, qasem, kassim, ghasem, qassim, kasim, gasem]
+  - [ibrahim, ibraheem, ebrahim, ibrahem, brahim, ibrahimi, ebrahimi]
+  - [ismail, ismael, esmail, ismaeel, esmaeil, ismaail, esmaeel, smail]
+  - [sulayman, suleiman, sulaiman, soleiman, suleyman, solaiman, soliman, süleyman, slimane, sleiman, soleimani]
+  - [salih, saleh, salleh, salehi]
+  - [abd, abdul, abdel, abdal, abdol, abdur, abdus, abdu, abdo, abdi, abdyl, abdoul]
+  - [rahman, rahmaan, rehman, rahmane, rahmon, rakhman]
+  - [rahim, raheem, rahem, rehim, rahiim]
+  - [aziz, azeez, azis, aziez]
+  - [karim, kareem, kerim, karem, kerem]
+  - [latif, lateef, latef, lateif]
+  - [hamid, hameed, hamed, hamied]
+  - [majid, majeed, maged, magid, mecid, madjid]
+  - [nasir, naser, nasser, nassir]
+  - [jamal, gamal, jamel, djamel, cemal, gamaal, jamaal]
+  - [jamil, gamil, jameel, djamil, cemil]
+  - [faysal, faisal, feisal, faizal, faissal, fayssal]
+  - [fahd, fahad, fahed, fahid]
+  - [khalifa, khalifah, kalifa, halife, khaleefa]
+  - [mustafa, mostafa, moustafa, mustapha, mustaffa, mostapha, mustafah]
+  - [tariq, tarek, tareq, tarik, tarique, tareck]
+  - [ziyad, ziad, zyad, ziyaad, zeyad]
+  - [walid, waleed, oualid, walyd, welid]
+  - [rashid, rasheed, rached, rashed, rachid, rashiid]
+  - [sharif, shareef, cherif, sherif, sherief, chérif]
+  - [hamza, hamzah, hamsa, hamzeh]
+  - [bilal, bilel, bilaal, belal]
+  - [adil, adel, adeel, aadil]
+  - [amin, ameen, amine, emin, amien]
+  - [anwar, anouar, anvar, enver, anwer]
+  - [bashir, basheer, bachir, beshir, basir]
+  - [habib, habeeb, habeb]
+  - [hakim, hakeem, hakem, hakimi]
+  - [halim, haleem, helim]
+  - [hashim, hashem, hachem, hasham, hashimi]
+  - [idris, idriss, edris, idrees, driss]
+  - [imad, emad, imaad]
+  - [isa, issa, eisa, essa, eissa, isaa]
+  - [jabir, jaber, gaber]
+  - [jafar, jaafar, jaffar, gaafar, jafari, jaafari, djaffar]
+  - [jalal, galal, jalaal, jelal, celal]
+  - [kamal, kamel, kemal, kamaal, camal]
+  - [mansur, mansour, mansoor, mansor, mansouri]
+  - [marwan, marouane, merwan, marwaan]
+  - [mazin, mazen, maazin]
+  - [mu'min, mumin, moumen, moumin]
+  - [munir, mounir, muneer, moneer]
+  - [musa, moussa, mousa, moosa, mussa]
+  - [nabil, nabeel, nabil, nebil]
+  - [najib, nagib, najeeb, nadjib, necip]
+  - [nizar, nezar, nizaar]
+  - [nur, noor, nour, nuur, nure]
+  - [rafiq, rafik, rafeeq, refik]
+  - [ramadan, ramdan, ramzan, ramadhan, ramazan]
+  - [rida, reda, ridha, riza, rizza]
+  - [sabri, sabry, sabree]
+  - [sadiq, sadek, sadik, sadeq, siddiq, sadiq]
+  - [salim, saleem, selim, salem]
+  - [salman, salmaan, selman, salmane]
+  - [sami, samy, samee, saami]
+  - [samir, sameer, samer, samire]
+  - [sayyid, syed, seyyed, seyed]
+  - [shakir, shaker, chakir, chaker]
+  - [tahir, taher, tahar, tahar, tahir]
+  - [talal, talaal, tallal]
+  - [tawfiq, tawfik, taufiq, toufik, tewfik, tawfeeq]
+  - [wahid, waheed, wahed, ouahid]
+  - [yahya, yahia, yehia, yahiya, yehya]
+  - [yasir, yasser, yaser, yassir, yasir]
+  - [zakariya, zakaria, zakariyya, zacharia, zekeriya]
+  - [zayd, zaid, zeid, zayed, zaied]
+  - [zaki, zaky, zekki]
+  - [fatima, fatimah, fatma, fatema, fatouma, fathima]
+  - [aisha, aysha, aicha, ayesha, aishah, aysa]
+  - [khadija, khadijah, khadidja, hatice, khadeeja]
+  - [maryam, mariam, meriem, meryem, mariyam, marium]
+  - [amina, aminah, amna, emine, aamina]
+  - [zaynab, zainab, zeinab, zeynep, zainub]
+  - [layla, leila, laila, leyla, lejla]
+  - [huda, houda, hoda, hudaa]
+  - [nasrallah, nasrullah, nasralla, nasrollah, nasr-allah]
+  - [hizballah, hezbollah, hizbullah, hizbollah, hezballah, hizb-allah]
+  - [qaida, qaeda, qaidah, qa'ida, kaida, qaida, al-qaida]
+  - [daesh, da'esh, daish, isil, isis]
+  - [taliban, taleban, talibaan]
+  - [shaykh, sheikh, shaikh, sheik, cheikh, sheykh, sheihk]
+  - [haj, hajj, haji, hajji, hadji, hagi, hadj]
+  - [mullah, mulla, molla, mollah]
+  - [mawlawi, maulawi, mawlavi, maulvi, molavi, maulana, mawlana]
+  - [khan, khaan]
+  - [shah, shaah, chah]
+  - [baig, beg, bey, bek, beyg]
+  - [ghulam, gholam, golam, ghulaam]
+  - [farhan, ferhan, farhaan]
+  - [fuad, fouad, fuaad, foad]
+  - [riyad, riyadh, riad, riyaad]
+  - [sa'd, saad, sad, saed]
+  - [sadr, sader, sadir, sadr]
+  - [ghani, ghanni, gani, ghany]
+  - [badr, bader, badre, badar]
+  - [bakr, bakar, baker, bakir, boubakeur]
+  - [thabit, thabet, sabit]
+  - [uthman, othman, osman, usman, othmane, ousmane]
+  - [hamdan, hamdaan, hamden]
+  - [sultan, sulthan, soltan, sultaan]
+  - [faraj, farag, faradj, farraj]
+  - [rizq, rizk, rezk, rizik]
+  - [jihad, jehad, djihad, cihad]
+  - [mujahid, mujahed, mojahed, moujahid]
+  - [sayf, saif, seif, saeif]
+  - [din, deen, eddine, eddin, uddin, oddin, uddine, dine]
+  - [tikriti, tikriti, al-tikriti, tikrity]
+
+# Titles and honorifics dropped from both the query and the list name before comparison
+honorifics:
+  [mr, mrs, ms, miss, dr, prof, eng, engr, general, gen, colonel, col, major, maj, captain, capt, lieutenant, lt,
+   brigadier, brig, admiral, commander, cdr, hon, sir, dato, datuk, tan, sri, haji, hajji, hadji, hajj, sheikh, shaikh,
+   shaykh, sheik, cheikh, mullah, mulla, molla, maulawi, mawlawi, maulvi, maulana, mawlana, sayyid, syed, sayed,
+   imam, ustad, ustaz, alhaji, alhaj, al-haj, hajia, pir, mian, ayatollah, ayatullah, hojatoleslam,
+   amir, emir, prince, princess, shaikha, sheikha, qari, hafiz, hafez, agha, aga, khwaja, khawaja, sardar, ra'is, rais,
+   الشيخ, شيخ, الحاج, حاج, الدكتور, دكتور, السيد, سيد, السيدة, سيده, المهندس, مهندس, الملا, ملا, مولوي, الاستاذ, استاذ]
+
+# Connecting particles / patronymic markers dropped as separate tokens (they carry no distinguishing information
+# once the name is tokenised). Arabic "al-" prefixes are stripped from the token they are attached to as well.
+particles:
+  [al, el, el-, ul, ur, us, as, ad, ar, an, at, az, ash, ath, adh, ad-, ibn, bin, ben, bint, binti, binte, bn, ould, wuld,
+   walad, wald, ben, ag, ait, ait-, ould, de, da, di, du, del, della, van, von, der, den, la, le, los, las, y, e, and, '&',
+   the, of, ال, بن, ابن, بنت, ولد, آل]
+
+# Legal-form suffixes dropped from entity names
+legal_suffixes:
+  [ltd, limited, llc, l.l.c, lllp, llp, lp, inc, incorporated, corp, corporation, co, company, cie, plc, pte, pty, pvt,
+   sa, sae, sal, sarl, s.a.r.l, sas, srl, spa, s.p.a, ag, gmbh, kg, bv, nv, ab, as, oy, oyj, ooo, oao, zao, pao, jsc, ojsc,
+   cjsc, pjsc, psc, fze, fzc, fzco, fz-llc, fzllc, dmcc, est, establishment, ets, trading, general, gen, group, holding,
+   holdings, international, intl, enterprises, enterprise, industries, industrial, services, bhd, sdn, tbk, pt, kk,
+   gk, sarl, ltda, s.l, sl, sp, sp.z.o.o, spzoo, zoo, ltd., inc., co., corp., ذ.م.م, ش.م.م, ش.م.ع, م.م.ح, شركة, مؤسسة]

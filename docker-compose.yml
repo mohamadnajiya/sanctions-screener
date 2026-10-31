@@ -1,0 +1,54 @@
+# GCC Sanctions & Terror-List Screener on the Ubuntu server. Both services bind to 127.0.0.1 only; Cloudflare Tunnel is the only way in.
+#   docker compose up -d --build      docker compose ps      curl -s http://127.0.0.1:${SCREEN_API_PORT:-8786}/v1/health
+# Lists live in ./data (bind-mounted read-only into the servers). The weekly refresh job rewrites ./data and the servers are
+# restarted to load it:   docker compose run --rm screen-refresh && docker compose restart screen-mcp screen-api
+services:
+  screen-mcp:
+    build: .
+    image: noahsarch/sanctions-screener:local
+    container_name: screen-mcp
+    command: ["screen-mcp", "--transport", "http", "--host", "0.0.0.0", "--port", "8785", "--allowed-host", "${SCREEN_PUBLIC_HOST:-screen.noahsarch.tech}"]
+    ports: ["127.0.0.1:${SCREEN_MCP_PORT:-8785}:8785"]
+    environment: { DO_NOT_TRACK: "1", SCREEN_LOG_LEVEL: WARNING, SCREEN_HEALTH_PORT: "8785", SCREEN_DATA_DIR: /app/data }
+    volumes: ["./data:/app/data:ro"]
+    read_only: true
+    tmpfs: ["/tmp"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    mem_limit: 512m
+    pids_limit: 128
+    restart: unless-stopped
+    logging: { driver: json-file, options: { max-size: "5m", max-file: "3" } }
+
+  screen-api:
+    image: noahsarch/sanctions-screener:local
+    container_name: screen-api
+    depends_on: [screen-mcp]
+    command: ["screen-api", "--host", "0.0.0.0", "--port", "8786"]
+    ports: ["127.0.0.1:${SCREEN_API_PORT:-8786}:8786"]
+    environment: { DO_NOT_TRACK: "1", SCREEN_HEALTH_PORT: "8786", SCREEN_RATE_PER_MINUTE: "120", SCREEN_RATE_BURST: "60", SCREEN_DATA_DIR: /app/data }
+    volumes: ["./data:/app/data:ro"]
+    read_only: true
+    tmpfs: ["/tmp"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    mem_limit: 512m
+    pids_limit: 128
+    restart: unless-stopped
+    logging: { driver: json-file, options: { max-size: "5m", max-file: "3" } }
+
+  # Weekly list refresh (the ONLY container with a reason to reach the internet). Run by cron, see deploy/agent.env.
+  screen-refresh:
+    image: noahsarch/sanctions-screener:local
+    profiles: ["jobs"]
+    user: "${AGENT_UID:-1000}:${AGENT_GID:-1000}"
+    command: ["screen", "refresh"]
+    environment: { DO_NOT_TRACK: "1", SCREEN_DATA_DIR: /app/data }
+    volumes: ["./data:/app/data"]
+    read_only: true
+    tmpfs: ["/tmp:size=512m"]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    mem_limit: 1g
+    pids_limit: 64
+    logging: { driver: json-file, options: { max-size: "5m", max-file: "3" } }

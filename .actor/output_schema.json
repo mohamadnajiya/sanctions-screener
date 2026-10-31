@@ -1,0 +1,9 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "GCC Sanctions & Terror-List Screener output",
+  "description": "One row per unique name: decision_hint (clear / review / likely_match), hit_count, top_score, hits[] (list, listed_name, score, match_strength, matched_on, programs, source_url), data_version and the disclaimer. In Standby mode the run is an MCP server.",
+  "properties": {
+    "results": { "type": "string", "title": "Screening results (dataset)", "description": "One row per unique name.", "template": "{{links.apiDefaultDatasetUrl}}/items" },
+    "mcpEndpoint": { "type": "string", "title": "MCP endpoint (Standby runs)", "template": "{{run.containerUrl}}/mcp" }
+  }
+}

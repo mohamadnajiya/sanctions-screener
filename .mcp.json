@@ -1,0 +1,1 @@
+{ "mcpServers": { "sanctions-screener": { "command": "uv", "args": ["run", "--directory", "D:\\Agents\\sanctions-screener", "screen-mcp"] } } }

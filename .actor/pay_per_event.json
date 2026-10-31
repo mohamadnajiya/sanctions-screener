@@ -1,0 +1,17 @@
+{
+  "name-screened": {
+    "eventTitle": "Name screened",
+    "eventDescription": "One unique name screened against the selected lists (screen_name, screen_batch, or one dataset row in an ordinary run). Duplicates in a batch are charged once.",
+    "eventPriceUsd": 0.01
+  },
+  "audit-report": {
+    "eventTitle": "Audit report",
+    "eventDescription": "One self-contained HTML screening report covering up to 50 subjects (audit_report).",
+    "eventPriceUsd": 0.25
+  },
+  "list-status": {
+    "eventTitle": "List status",
+    "eventDescription": "Freshness and provenance of the bundled lists. Free.",
+    "eventPriceUsd": 0
+  }
+}

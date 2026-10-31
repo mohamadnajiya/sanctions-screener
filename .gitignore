@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.hypothesis/
+.ruff_cache/
+.pytest_cache/
+dist/
+build/
+.env
+_to_delete/
+deploy/worker/.wrangler/

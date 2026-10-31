@@ -1,0 +1,58 @@
+{
+  "title": "GCC Sanctions & Terror-List Screener",
+  "type": "object",
+  "schemaVersion": 1,
+  "description": "Paste names (one per line). Each is screened against OFAC SDN + Consolidated, the UN Security Council Consolidated List, the EU and UK sanctions lists and the UAE Local Terrorist List; one dataset row per unique name with decision_hint (clear / review / likely_match), score and the top hits. Charged $0.01 per unique name. In Standby mode this Actor is also an MCP server at /mcp (screen_name with DOB / nationality / ID, screen_batch, audit_report, list_status, explain_match).",
+  "properties": {
+    "names": {
+      "title": "Names to screen",
+      "type": "array",
+      "description": "One person or company per line, Latin or Arabic script (up to 5,000 per run). Duplicates are screened once.",
+      "editor": "stringList",
+      "prefill": [
+        "Saddam Hussein Al-Tikriti",
+        "محمد حسن آخوند",
+        "Bank Melli Iran",
+        "Maria Fernanda Oliveira"
+      ]
+    },
+    "text": {
+      "title": "Or paste text with one name per line",
+      "type": "string",
+      "description": "Lines (or semicolon-separated items) are treated as names.",
+      "editor": "textarea"
+    },
+    "nationality": {
+      "title": "Default nationality (ISO2)",
+      "type": "string",
+      "description": "Applied to every name: 'AE', 'IR', 'GB'… A nationality mismatch with the listed entry lowers the score by 5; a match raises it by 3.",
+      "editor": "textfield",
+      "pattern": "^[A-Za-z]{2}$"
+    },
+    "entity_type": {
+      "title": "Type of the names",
+      "type": "string",
+      "description": "individual, entity (companies, organisations), vessel, aircraft or any.",
+      "editor": "select",
+      "enum": ["any", "individual", "entity", "vessel", "aircraft"],
+      "enumTitles": ["Any (default)", "Individuals", "Entities / companies", "Vessels", "Aircraft"],
+      "default": "any"
+    },
+    "min_score": {
+      "title": "Minimum score",
+      "type": "integer",
+      "description": "Hits below this score (0–100) are not reported. 85 is the default; 80 widens the net for onboarding, 92 for alert review.",
+      "default": 85,
+      "minimum": 50,
+      "maximum": 100
+    },
+    "lists": {
+      "title": "Lists to screen",
+      "type": "array",
+      "description": "Leave empty for all six.",
+      "editor": "select",
+      "items": { "type": "string", "enum": ["ofac_sdn", "ofac_cons", "un", "eu", "uk", "uae"], "enumTitles": ["OFAC SDN", "OFAC Consolidated (non-SDN)", "UN Security Council", "EU Financial Sanctions", "UK Sanctions List", "UAE Local Terrorist List"] }
+    }
+  },
+  "required": []
+}

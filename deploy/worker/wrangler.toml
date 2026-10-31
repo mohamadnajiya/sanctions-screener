@@ -1,0 +1,35 @@
+# Cloudflare Worker gateway for screen.noahsarch.tech — rate limiting + API keys in front of the tunnel.
+# Shares the ORACLE_KEYS KV namespace with the other Noah's Arch agents: one API key works for all of them.
+name = "screen-gw"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+workers_dev = false
+send_metrics = false
+
+routes = [
+  { pattern = "screen.noahsarch.tech/*", zone_name = "noahsarch.tech" }
+]
+
+[vars]
+FREE_LIMIT_PER_MINUTE = "30"
+KEYED_LIMIT_PER_MINUTE = "600"
+# Free without a key (evaluation): list freshness and the match explainer.
+FREE_TOOLS = "list_status,explain_match"
+REQUIRE_KEY_FOR_MCP = "false"
+MAX_BODY_BYTES = "262144"  # a 500-subject screen_batch body can exceed 64 KB
+
+[[unsafe.bindings]]
+name = "RL_FREE"
+type = "ratelimit"
+namespace_id = "2181"
+simple = { limit = 30, period = 60 }
+
+[[unsafe.bindings]]
+name = "RL_KEYED"
+type = "ratelimit"
+namespace_id = "2182"
+simple = { limit = 600, period = 60 }
+
+[[kv_namespaces]]
+binding = "ORACLE_KEYS"
+id = "6bec4f9b42204c88af219acd1a585c9b"

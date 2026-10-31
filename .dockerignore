@@ -1,0 +1,13 @@
+.git
+.venv
+.hypothesis
+.ruff_cache
+.pytest_cache
+__pycache__
+build/
+docs/
+tests/
+.env
+_to_delete/
+*.tgz
+*.bundle

@@ -1,0 +1,93 @@
+data_version: 2026.10.31-1
+generated_at: '2026-10-31T18:54:30Z'
+lists:
+  ofac_sdn:
+    title: OFAC Specially Designated Nationals (SDN) List
+    authority: U.S. Department of the Treasury, Office of Foreign Assets Control
+    source_url: https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.XML
+    page_url: https://ofac.treasury.gov/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists
+    fetched_at: '2026-10-31T18:54:30Z'
+    sha256: c1279a38fa180fe79fe1ed263618d1ceb63f5bcca3bc24771f2e69fd1d0b5eb9
+    bytes: 127776518
+    counts:
+      entries: 19484
+      aliases: 30614
+      entity: 10045
+      individual: 7529
+      vessel: 1568
+      aircraft: 342
+    terms: U.S. Government work; public domain (17 U.S.C. §105). Attribution to OFAC requested.
+  ofac_cons:
+    title: OFAC Consolidated (non-SDN) Sanctions List
+    authority: U.S. Department of the Treasury, Office of Foreign Assets Control
+    source_url: https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONS_ADVANCED.XML
+    page_url: https://ofac.treasury.gov/consolidated-sanctions-list-non-sdn-lists
+    fetched_at: '2026-10-31T18:54:30Z'
+    sha256: dc3f61dce650a4661ff69d6c1847f0d5a90f2fa63951267af68fcfacdb6d8a75
+    bytes: 4580537
+    counts:
+      entries: 486
+      aliases: 1308
+      individual: 118
+      entity: 368
+    terms: U.S. Government work; public domain (17 U.S.C. §105).
+  un:
+    title: UN Security Council Consolidated List
+    authority: United Nations Security Council
+    source_url: https://scsanctions.un.org/resources/xml/en/consolidated.xml
+    page_url: https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list
+    fetched_at: '2026-10-31T18:54:30Z'
+    sha256: a7b9a330dfa005013321d6ff2d2fda1c191cb78a9fff12b432cab4825ed7a919
+    bytes: 2177571
+    counts:
+      entries: 1007
+      aliases: 3164
+      individual: 733
+      entity: 274
+    terms: Published by the UN for implementation by all Member States; UN terms of use (https://www.un.org/en/about-us/terms-of-use).
+  eu:
+    title: EU Consolidated Financial Sanctions List
+    authority: European Commission, DG FISMA (Financial Sanctions Database)
+    source_url: https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw
+    page_url: https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions
+    fetched_at: '2026-10-31T18:54:30Z'
+    sha256: 636800c3e494b2ef8934f51f5e23c914a6208a383ac850e674b1b35a7d49d34f
+    bytes: 25899600
+    counts:
+      entries: 6269
+      aliases: 24482
+      individual: 4490
+      entity: 1779
+    terms: Commission reuse policy (Decision 2011/833/EU) — free reuse with attribution; public token 'dG9rZW4tMjAxNw' documented on data.europa.eu.
+  uk:
+    title: UK Sanctions List (FCDO; single UK list since 28 Jan 2026, replaces the OFSI Consolidated List)
+    authority: UK Foreign, Commonwealth & Development Office (OFSI consolidated list retired 28 January 2026)
+    source_url: https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.xml
+    page_url: https://www.gov.uk/government/publications/the-uk-sanctions-list
+    fetched_at: '2026-10-31T18:54:30Z'
+    sha256: ed397aa9c89106c2615eee20ba249e364273c185c41245e7027659fce7d01086
+    bytes: 22084189
+    counts:
+      entries: 6420
+      aliases: 13221
+      entity: 1667
+      individual: 4070
+      vessel: 683
+    terms: Open Government Licence v3.0 (attribution).
+  uae:
+    title: UAE Local Terrorist List (Cabinet designations under Cabinet Resolution 74/2020, UNSCR 1373)
+    authority: UAE Executive Office for Control and Non-Proliferation (EOCN), publishing UAE Cabinet resolutions
+    source_url: https://www.uaeiec.gov.ae/API/Upload/DownloadFile?FileID=0433bfdb-8a3d-44db-9015-90cbbf48f6f6
+    page_url: https://www.uaeiec.gov.ae/en-us/un-page?p=1
+    fetched_at: '2026-10-31T18:54:30Z'
+    sha256: 0811418a1325ddaf6ab6654c91dad36d2280975fb15340dd323ff4dec7f5d2a7
+    bytes: 183808
+    counts:
+      entries: 311
+      aliases: 307
+      individual: 171
+      entity: 140
+    terms: 'Official public disclosure list (EOCN website terms: https://www.uaeiec.gov.ae/en-us/terms-and-conditions). Published as an .xls workbook (Excel link
+      on the list page).'
+failed: {}
+notes: Official public lists only; OpenSanctions and other aggregators are never used. Re-run `screen refresh` (weekly cron) to update; the request path never fetches.
