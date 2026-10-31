@@ -1,7 +1,7 @@
 """Apify Standby entry point + pay-per-event hook. `apify` is an optional extra used only in the Actor image.
 
-from agentkit.apify import run_standby
-def main(): run_standby(CATALOGUE)
+    from agentkit.apify import run_standby
+    def main(): run_standby(CATALOGUE)
 """
 
 from __future__ import annotations

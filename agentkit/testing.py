@@ -21,7 +21,7 @@ def check_mcp_matches_catalogue(cat: Catalogue) -> None:
     async def go() -> None:
         async with Client(build_server(cat)) as c:
             tools = {t.name: t for t in (await c.list_tools()).tools}
-            assert set(tools) == set(cat.by_name), set(tools) ^ set(cat.by_name)
+            assert set(tools) == set(cat.by_name), (set(tools) ^ set(cat.by_name))
             for spec in cat.tools:
                 schema = tools[spec.name].input_schema
                 assert set(schema["properties"]) == set(spec.input_model.model_fields), spec.name

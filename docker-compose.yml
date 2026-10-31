@@ -26,7 +26,7 @@ services:
     depends_on: [screen-mcp]
     command: ["screen-api", "--host", "0.0.0.0", "--port", "8786"]
     ports: ["127.0.0.1:${SCREEN_API_PORT:-8786}:8786"]
-    environment: { DO_NOT_TRACK: "1", SCREEN_HEALTH_PORT: "8786", SCREEN_RATE_PER_MINUTE: "120", SCREEN_RATE_BURST: "60", SCREEN_DATA_DIR: /app/data }
+    environment: { DO_NOT_TRACK: "1", SCREEN_HEALTH_PORT: "8786", SCREEN_RATE_PER_MINUTE: "120", SCREEN_RATE_BURST: "60", SCREEN_MAX_BODY_BYTES: "262144", SCREEN_DATA_DIR: /app/data }
     volumes: ["./data:/app/data:ro"]
     read_only: true
     tmpfs: ["/tmp"]

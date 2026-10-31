@@ -1,7 +1,7 @@
 """MCP server generated from a Catalogue. No logging of arguments, no network at request time.
 
-from agentkit.mcp_server import build_server, run_cli
-run_cli(CATALOGUE)          # --transport stdio|http --allowed-host ...
+    from agentkit.mcp_server import build_server, run_cli
+    run_cli(CATALOGUE)          # --transport stdio|http --allowed-host ...
 """
 
 from __future__ import annotations
@@ -148,8 +148,7 @@ def run_cli(cat: Catalogue, argv: list[str] | None = None, *, default_port: int 
         enable_dns_rebinding_protection=True,
         allowed_hosts=sorted(hosts),
         allowed_origins=sorted(
-            {f"https://{h}" for h in ns.allowed_host if h}
-            | {f"http://127.0.0.1:{ns.port}", f"http://localhost:{ns.port}"}
+            {f"https://{h}" for h in ns.allowed_host if h} | {f"http://127.0.0.1:{ns.port}", f"http://localhost:{ns.port}"}
         ),
     )
     anyio.run(

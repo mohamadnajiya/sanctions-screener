@@ -48,6 +48,7 @@ class TokenBucket:
 def create_app(cat: Catalogue, *, rate_per_minute: int | None = None, burst: int | None = None) -> FastAPI:
     info = cat.info
     p = info.env_prefix
+    max_body = int(os.environ.get(f"{p}_MAX_BODY_BYTES", str(MAX_BODY_BYTES)))
     limiter = TokenBucket(
         rate_per_minute if rate_per_minute is not None else int(os.environ.get(f"{p}_RATE_PER_MINUTE", "120")),
         burst if burst is not None else int(os.environ.get(f"{p}_RATE_BURST", "60")),
@@ -64,7 +65,7 @@ def create_app(cat: Catalogue, *, rate_per_minute: int | None = None, burst: int
     @app.middleware("http")
     async def guard(request: Request, call_next: Callable):
         cl = request.headers.get("content-length")
-        if cl and cl.isdigit() and int(cl) > MAX_BODY_BYTES:
+        if cl and cl.isdigit() and int(cl) > max_body:
             return JSONResponse({"error": "request body too large"}, status_code=413)
         if request.url.path.startswith("/v1/tools/"):
             key = request.headers.get("x-api-key") or (request.client.host if request.client else "anon")
